@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TOP1 post</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        hr {
+            border: 0.5px solid rgb(201, 198, 198);
+        }
+
+        /*header 스타일*/
+        header {
+            height: 40px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: ivory;
+        }
+
+        header .logo {
+            padding-left: 20px;
+        }
+
+        header .search {
+            width: 600px;
+            line-height: 40px;
+            ;
+        }
+
+        .search_for .size {
+            width: 200px;
+            height: 25px;
+        }
+
+        .search_button .size {
+            width: 40px;
+            height: 30px;
+        }
+
+        header .nav {
+            width: 150px;
+        }
+
+        /*section1 스타일*/
+        .section1 {
+            width: 960px;
+            height: 30px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1 a {
+            padding: 0px 30px;
+            line-height: 30px;
+        }
+
+        /*section2 스타일*/
+        .section2 {
+            width: 960px;
+            margin-top: 20px;
+        }
+
+        .section2 h2,
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        .section2 .paragraph {
+            display: flex;
+            justify-content: center;
+            width: 960px;
+            margin: 15px 0px;
+        }
+
+        .section2 p {
+            text-align: center;
+        }
+
+        .section2 a {
+            color: blue
+        }
+
+        .section2 img {
+            width: 500px;
+        }
+
+        /*section3 스타일*/
+        .section3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .section3 .size{
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-right: 10px;
+            width: 100px;
+            height: 50px;
+            font-size: 15px;
+        }
+        .related_Links1, 
+        .related_Links2, .related_Links3
+        {
+            margin: 15px 20px;
+            width: 150px;
+            height: 110px;
+            border: 0.4px solid black;
+        }
+        .related_Links1{
+            background-image: url('./image/top1_thumbnail.png');
+        }
+        .related_Links2{
+            background-image: url('./image/top2_thumbnail.png');
+        }
+        .related_Links3{
+            background-image: url('./image/top3_thumbnail.JPG');
+        }
+        .section3 h5{
+            color: rgb(255, 255, 255);
+            margin-top: 25%;
+            text-align: center;
+            text-decoration: underline 2px;
+        }
+
+        /*comments 스타일*/
+        .comments{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 40px;
+        }
+        .comments  table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .comment_for .size {
+            width: 500px;
+            height: 25px;
+        }
+
+        .comment_button .size {
+            width: 100px;
+            height: 30px;
+        }
+        /*footer 스타일*/
+        .foot {
+            width: 960px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .foot_nav {
+            width: 960px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .foot_nav>a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 12px;
+        }
+
+        .foot_nav>a:hover {
+            /* 마우스 올렸을 때 : hover */
+            color: blue;
+        }
+
+        .foot li {
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>POST LIFE</h1>
+            </a>
+        </div>
+        <div class="search">
+            <table border="0.1">
+                <tr>
+                    <form>
+                        <td class="search_for"><input class="size" type="text" name="search" id="search" />
+                        <td class="search_button"><input class="size" type="button" name="search_btn" id="search_btn"
+                                value="검색" />
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="login.html"> 로그인 </a> &nbsp;
+            <a href="membership.html"> 회원가입 </a>
+        </div>
+    </header>
+    <hr />
+
+    <div class="section1">
+        <a href="post_category.html"> 인기 포스트</a>
+        <a href="post_category.html"> 최신 포스트</a>
+        <a href="my_page.html"> my page</a>
+    </div>
+    <hr />
+
+    <div class="section2">
+        <h2> atmega328, 풀업저항 제어하기</h2>
+        <h3> god_buu</h3>
+        <div class="paragraph">
+            <img src="./image/top1_01.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                위 그림을 보시면 5 [V] Vcc와 그라운드가 버튼으로 연결되어 있습니다.<br />
+                버튼을 누르기 전에는 IO13에 5 [V], HIGH가 입력되지만,<br />
+                버튼을 누른 순간 IO13에는 5 [V]가 들어갈지 0 [V]가 들어갈지 애매해집니다.<br />
+                실제로 이렇게 회로를 짜게 되시면 도선은 저항이 매우 낮기 때문에,<br />
+                옴의 법칙 V=IR에 의해 엄청나게 큰 전류가 흐르게 되고, 시스템을 망가뜨릴 것입니다.<br />
+                그래서 우린 pull-up 저항 혹은 pull-down 저항을 달아줘야 합니다.<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top1_02.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                위와 같은 저항을 pull-up 저항이라고 하는데요.<br />
+                버튼을 누르기 전에는 IO13에 HIGH가 들어가고,<br />
+                버튼을 누르면 IO13에 LOW가 들어가는 것을 확인하실 수 있습니다.<br />
+                왜냐하면 버튼을 누른 순간, 저항에 전류가 흐름에 따라 5 [V]의 전압강하가 일어나므로,<br />
+                저항이 없는 경우와 달리 시스템이 안정화될 수 있는 것입니다.<br />
+                여기서 버튼과 저항의 위치를 바꾸면 pull-down 저항을 회로에 적용시킨 것이 됩니다.<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <a href="https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf"
+                target="_blank">atmega 328p 데이터시트 링크</a>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top1_03.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                어쨌든 중요한 것은 우리가 저항을 따로 달아주지 않아도,<br />
+                atmega328p의 내부 풀업 저항을 활성화시키면 된다는 것입니다.<br />
+                위 그림에서 pull-up 저항과 Vcc를 스위치를 통해 연결시키면, 풀업 저항이 활성화됩니다.<br />
+                다른 얘기지만 위 회로에서 다이오드와 캐패시터는 시스템을 보호하기 위한 소자로 사용됩니다.<br />
+                다이오드는 그려진 화살표 방향으로만, 전류가 흐를 수 있죠.<br />
+                따라서 Vcc보다 높은 전압, 음전압이 걸릴 경우에 걸러주는 역할을 합니다.<br />
+                캐패시터는 임피던스(저항)로 나타낼 경우, 1/jwc가 되죠.<br />
+                w는 2𝝅에 주파수를 곱한 것입니다. 따라서 캐패시터는 신호의 주파수에 따라 저항값이 변하게 됩니다.<br />
+                직류의 경우, 주파수가 0이니 캐패시터는 임피던스가 무한대가 됩니다.<br />
+                즉, 회로의 캐패시터는 주파수가 존재하는 신호의 잡음(noise)을 걸러주는 역할을 하게 됩니다.<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <a href=https://www.tinkercad.com/things/6okUN1dmDKY?sharecode=WxlzIVQ96qJDADj5Nt-wic4_P-eQ_7UWTev8DltulB8"
+                target="_blank">시뮬레이션 사이트 링크</a>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top1_04.JPG">
+        </div>
+        <div class="paragraph">
+            <img src="./image/top1_05.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                그림의 and 게이트의 입력 :<br/>
+                1. not이 붙어있는 PUD<br/>
+                2. not이 붙어있는 DDxn의 출력<br/>
+                3. PORTxn의 출력<br/><br/>
+                AND 게이트는 입력이 모두 1일 경우에만, 출력이 1이 됩니다.<br/>
+                즉, PUD는 0, DDxn은 0, PORTxn은 1이 되어야, not 2개를 거쳐서 스위치가 on이 되어 PULLUP이 활성화됩니다.<br/>
+                &는 비트 연산자로 and를 뜻합니다.<br/>
+                if(!(PINB & _BV(PB0)))의 경우, PINB는 포트B로 받은 입력을 반환하기 때문에,<br/>
+                if( !(0bxxxxxxx? & 0b00000001) )일 것입니다.<br/>
+                즉, 버튼을 누르지 않을 경우 pullup에 의해 ?는 1(HIGH)이 되어, if( !(true))로 if문은 실행되지 않습니다.<br/>
+                버튼을 누를경우, ?는 0(LOW)이 되어, if문이 실행될 것입니다.<br/>
+            </p>
+        </div>
+    </div><br/><hr/>
+
+    <div class="section3">
+        <div class="button">
+            <input class="size" type="button" name="follow_btn" id="follow_btn" value="팔로우" /><br/>
+            <input class="size" type="button" name="like_btn" id="like_btn" value="좋아요" />
+        </div>
+        <a href="top1_post.html">
+            <div class="related_Links1">
+                <h5>atmega328, 풀업저항 제어하기</h5>
+            </div>
+        </a>
+        <a href="top2_post.html">
+            <div class="related_Links2">
+                <h5>Ai 이미지 생성 프로그램, midjourney 사용후기</h5>
+            </div>
+        </a>
+        <a href="#">
+            <div class="related_Links3">
+                <h5>땅끝 해남에서의 드라이브</h5>
+            </div>
+        </a>
+    </div><hr/>
+
+    <div class="comments">
+        <table border="0">
+            <tr>
+                <form>
+                    <td class="comment_for"><input class="size" type="text" name="comment" id="comment" />
+                    <td class="comment_button"><input class="size" type="button" name="comment_btn" id="comment_btn"
+                            value="댓글 추가" />
+                </form>
+            </tr>
+        </table>
+    </div>
+
+    <div class="foot">
+        <div class="foot_nav">
+            <a href="#" target="_blank">정보공개알림</a> |
+            <a href="#" target="_blank">개인정보처리방침</a> |
+            <a href="#" target="_blank">이용서비스현황</a> |
+            <a href="#" target="_blank">이용규정</a> |
+            <a href="#" target="_blank">이메일무단수집거부</a> |
+            <a href="#" target="_blank">전화번호안내</a> |
+            <a href="#" target="_blank">오시는길</a>
+        </div>
+        <div class="addr">
+            <ul>
+                <li>Copyright &copy; POSTLIFE All Right Reserved</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TOP2 post</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        hr {
+            border: 0.5px solid rgb(201, 198, 198);
+        }
+
+        /*header 스타일*/
+        header {
+            height: 40px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: ivory;
+        }
+
+        header .logo {
+            padding-left: 20px;
+        }
+
+        header .search {
+            width: 600px;
+            line-height: 40px;
+            ;
+        }
+
+        .search_for .size {
+            width: 200px;
+            height: 25px;
+        }
+
+        .search_button .size {
+            width: 40px;
+            height: 30px;
+        }
+
+        header .nav {
+            width: 150px;
+        }
+
+        /*section1 스타일*/
+        .section1 {
+            width: 960px;
+            height: 30px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1 a {
+            padding: 0px 30px;
+            line-height: 30px;
+        }
+
+        /*section2 스타일*/
+        .section2 {
+            width: 960px;
+            margin-top: 20px;
+        }
+
+        .section2 h2,
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        .section2 .paragraph {
+            display: flex;
+            justify-content: center;
+            width: 960px;
+            margin: 15px 0px;
+        }
+
+        .section2 p {
+            text-align: center;
+        }
+
+        .section2 a {
+            color: blue
+        }
+
+        .section2 img {
+            width: 500px;
+        }
+
+        /*section3 스타일*/
+        .section3 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .section3 .size {
+            margin-top: 15px;
+            margin-left: 10px;
+            width: 100px;
+            height: 50px;
+            font-size: 15px;
+        }
+
+        .related_Links1,
+        .related_Links2,
+        .related_Links3 {
+            margin: 15px 20px;
+            width: 150px;
+            height: 110px;
+            border: 0.4px solid black;  
+        }
+
+        .related_Links1 {
+            background-image: url('./image/top1_thumbnail.png');
+        }
+
+        .related_Links2 {
+            background-image: url('./image/top2_thumbnail.png');
+        }
+
+        .related_Links3 {
+            background-image: url('./image/top3_thumbnail.JPG');
+        }
+
+        .section3 h5 {
+            color: rgb(255, 255, 255);
+            margin-top: 25%;
+            text-align: center;
+            text-decoration: underline 2px;
+        }
+
+        /*comments 스타일*/
+        .comments {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            line-height: 40px;
+        }
+
+        .comments table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .comment_for .size {
+            width: 500px;
+            height: 25px;
+        }
+
+        .comment_button .size {
+            width: 100px;
+            height: 30px;
+        }
+
+        /*footer 스타일*/
+        .foot {
+            width: 960px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .foot_nav {
+            width: 960px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .foot_nav>a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 12px;
+        }
+
+        .foot_nav>a:hover {
+            /* 마우스 올렸을 때 : hover */
+            color: blue;
+        }
+
+        .foot li {
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>POST LIFE</h1>
+            </a>
+        </div>
+        <div class="search">
+            <table border="0.1">
+                <tr>
+                    <form>
+                        <td class="search_for"><input class="size" type="text" name="search" id="search" />
+                        <td class="search_button"><input class="size" type="button" name="search_btn" id="search_btn"
+                                value="검색" />
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="login.html"> 로그인 </a> &nbsp;
+            <a href="membership.html"> 회원가입 </a>
+        </div>
+    </header>
+    <hr />
+
+    <div class="section1">
+        <a href="post_category.html"> 인기 포스트</a>
+        <a href="post_category.html"> 최신 포스트</a>
+        <a href="my_page.html"> my page</a>
+    </div>
+    <hr />
+
+    <div class="section2">
+        <h2> Ai 이미지 생성 프로그램, midjourney 사용후기</h2>
+        <h3> gkdbs017</h3>
+        <div class="paragraph">
+            <img src="./image/top2_01.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                Midjourney는 텍스트로 된 설명문 또는 설명구로부터<br />
+                이미지를 생성하는 인공 지능 프로그램으로,<br />
+                디스코드라는 커뮤니티 소프트웨어를 통한 접근성이 매우 용이한데요.<br />
+                콜로라도 주립박람회 미술대회 디지털 아트 부문 1등을 차지해 논란이 된 작품도<br />
+                Midjourney를 사용하여 텍스트 입력으로만 완성된 작품이었어요.<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top2_02.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                위 그림들이 제가 'blue sky'라는 명령어를 집어 넣었을 때,<br />
+                나오는 그림들입니다.<br />
+                보이시는 것처럼 4개의 랜덤한 그림들이 그려지며,<br />
+                왼쪽위는 1, 오른쪽 위는 2, 왼쪽 아래는 3, 오른쪽 아래는 4로 주어집니다.<br />
+                U는 저장, V는 배리에이션을 뜻하며,<br />
+                u1을 누르면 1번 그림이 업스케일링되어 저장가능해지고,<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top2_03.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                v1을 누르면 위와 같이 1번 그림의 4가지 배리에이션이 새로 생성됩니다.<br />
+                photo, watercolor print 등 다양한 장르도 소화가능하며, <br />
+                이러한 속성들을 자세하게, 많이 적을수록 <br />
+                본인이 원하는 그림을 얻을 확률도 늘어납니다.<br />
+                midjourney는 지금도 훌륭하지만 더욱 발전한다면</br>
+                높은 확률로 엄청난 퀄리티의 작품들을 순식간에 뽑을 수 있을 것입니다.<br />
+                ai로 그린 그림은 저작권을 주장할 수 없으므로, <br />
+                미술 비전문가더라도 잘만 활용한다면, <br />
+                다양한 곳에 자금 걱정없이 사용할 수 있을 것 같습니다.<br />
+            </p>
+        </div>
+        <div class="paragraph">
+            <img src="./image/top2_04.png">
+        </div>
+        <div class="paragraph">
+            <img src="./image/top2_05.png">
+        </div>
+        <div class="paragraph">
+            <p>
+                위 그림들은 각각 blue sky, watercolor print와<br />
+                space faring alien wandering the desert의 명령어에 대한 그림으로,<br />
+                나름 훌륭하게 그림들이 완성되는 것을 확인할 수 있었습니다.<br />
+            </p>
+        </div>
+    </div><br />
+    <hr />
+    <div class="section3">
+        <div class="button">
+            <input class="size" type="button" name="follow_btn" id="follow_btn" value="팔로우" /><br />
+            <input class="size" type="button" name="like_btn" id="like_btn" value="좋아요" />
+        </div>
+        <a href="top1_post.html">
+            <div class="related_Links1">
+                <h5>atmega328, 풀업저항 제어하기</h5>
+            </div>
+        </a>
+        <a href="top2_post.html">
+            <div class="related_Links2">
+                <h5>Ai 이미지 생성 프로그램, midjourney 사용후기</h5>
+            </div>
+        </a>
+        <a href="#">
+            <div class="related_Links3">
+                <h5>땅끝 해남에서의 드라이브</h5>
+            </div>
+        </a>
+    </div>
+    <hr />
+
+    <div class="comments">
+        <table border="0">
+            <tr>
+                <form>
+                    <td class="comment_for"><input class="size" type="text" name="comment" id="comment" />
+                    <td class="comment_button"><input class="size" type="button" name="comment_btn" id="comment_btn"
+                            value="댓글 추가" />
+                </form>
+            </tr>
+        </table>
+    </div>
+
+    <div class="foot">
+        <div class="foot_nav">
+            <a href="#" target="_blank">정보공개알림</a> |
+            <a href="#" target="_blank">개인정보처리방침</a> |
+            <a href="#" target="_blank">이용서비스현황</a> |
+            <a href="#" target="_blank">이용규정</a> |
+            <a href="#" target="_blank">이메일무단수집거부</a> |
+            <a href="#" target="_blank">전화번호안내</a> |
+            <a href="#" target="_blank">오시는길</a>
+        </div>
+        <div class="addr">
+            <ul>
+                <li>Copyright &copy; POSTLIFE All Right Reserved</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

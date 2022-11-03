@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>내 페이지</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        hr {
+            border: 0.5px solid rgb(201, 198, 198);
+        }
+
+        /*header 스타일*/
+        header {
+            height: 40px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: ivory;
+        }
+
+        header .logo {
+            padding-left: 20px;
+        }
+
+        header .search {
+            width: 600px;
+            line-height: 40px;
+            ;
+        }
+
+        .search_for .size {
+            width: 200px;
+            height: 25px;
+        }
+
+        .search_button .size {
+            width: 40px;
+            height: 30px;
+        }
+
+        header .nav {
+            width: 100px;
+        }
+
+        /*section1 스타일*/
+        .section1 {
+            width: 960px;
+            height: 30px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1 a {
+            padding: 0px 30px;
+            line-height: 30px;
+        }
+
+        /*section2 스타일*/
+        .section2 {
+            height: 150px;
+            margin-top: 15px;
+            background-image: url('./image/my_page_user.jpg');
+        }
+
+        .section2 .tab {
+            margin: 20px 0px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section2 h3,
+        h4 {
+            padding: 10px 0px;
+        }
+
+        .section2 .tab_sect {
+            width: 150px;
+            text-align: center;
+        }
+
+        /* tabcontainer 스타일*/
+        .tabcontainer {
+            margin: 20px 0px;
+            width: 960px;
+        }
+
+        .tabnavigation ul {
+            padding: 0;
+            margin: 0;
+            display: none;
+            text-align: center;
+        }
+
+        .tabnavigation ul li {
+            padding: 3px;
+            display: inline;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+
+        .tabnavigation ul li:hover {
+            cursor: pointer;
+        }
+        .section5_posting {
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 3%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .section5_posting>h3 {
+            border-right: 1px solid black;
+            width: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        .section5_posting img {
+            width: 75px;
+            height: 50px;
+        }
+
+        .section5_posting_description {
+            width: 800px;
+            border-left: 1px solid black;
+        }
+
+        .section5_posting_description h3 {
+            line-height: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section6 {
+            margin-top: 25px;
+        }
+
+        .section6 .section5_posting_description {
+            width: 900px;
+            border-left: 1px solid black;
+        }
+
+        /*footer 스타일*/
+        .foot {
+            width: 960px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .foot_nav {
+            width: 960px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .foot_nav>a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 12px;
+        }
+
+        .foot_nav>a:hover {
+            /* 마우스 올렸을 때 : hover */
+            color: blue;
+        }
+
+        .foot li {
+            font-size: 10pt;
+        }
+    </style>
+
+    <script>
+        //각 컨테이너의 화면 설정
+        // 첫 번째 페이지 외에는 모두 감추고
+        // 첫 번째 탭을 강조
+
+        window.onload = function () {
+
+            //모든 컨테이너에 대해 반복
+            let containers = document.querySelector(".tabcontainer")
+
+            //요소 보이기 감추기
+            let nav = containers.querySelector(".tabnavigation ul")
+            nav.style.display = "block"
+
+            // 현재 탭 설정
+            let navitem = containers.querySelector(".tabnavigation ul li")
+            let ident = navitem.id.split("_")[1]
+            navitem.parentNode.setAttribute("data-current", ident)
+            navitem.setAttribute("style", "background-color:#f00")
+
+            let pages = containers.querySelectorAll(".tabpage")
+            for (let i = 1; i < pages.length; i++) {
+                pages[i].style.display = "none"
+            }
+
+            let tabs = containers.querySelectorAll(".tabnavigation ul li")
+            for (let i = 0; i < tabs.length; i++) {
+                tabs[i].onclick = displayPage
+            }
+
+        }
+
+        //탭 클릭
+        function displayPage() {
+            let current = this.parentNode.getAttribute("data-current")
+            document.getElementById("tabnav_" + current).setAttribute("style", "background-color:#fff")
+            document.getElementById("tabpage_" + current).style.display = "none"
+
+            let ident = this.id.split("_")[1]  /* 번호 */
+            this.setAttribute("style", "background-color:#f00")
+            document.getElementById("tabpage_" + ident).style.display = "block"
+            this.parentNode.setAttribute("data-current", ident)
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>POST LIFE</h1>
+            </a>
+        </div>
+        <div class="search">
+            <table border="0.1">
+                <tr>
+                    <form>
+                        <td class="search_for"><input class="size" type="text" name="search" id="search" />
+                        <td class="search_button"><input class="size" type="button" name="search_btn" id="search_btn"
+                                value="검색" />
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="index.html"> 로그아웃 </a>
+        </div>
+    </header>
+    <hr />
+
+    <div class="section1">
+        <a href="post_category.html"> 인기 포스트</a>
+        <a href="post_category.html"> 최신 포스트</a>
+        <a href="my_page.html"> my page</a>
+    </div>
+    <hr />
+
+    <div class="section2">
+        <div class="tab">
+            <h3>god_buu님의 페이지</h3>
+        </div>
+        <div class="tab">
+            <div class="tab_sect">
+                <h4>팔로잉</h4>
+                <h4>2</h4>
+            </div>
+            <div class="tab_sect">
+                <h4>팔로워</h4>
+                <h4>0</h4>
+            </div>
+            <div class="tab_sect">
+                <h4>포스트 수</h4>
+                <h4>1</h4>
+            </div>
+            <div class="tab_sect">
+                <h4>좋아요한 포스트</h4>
+                <h4>1</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabcontainer">
+        <div class="tabnavigation">
+            <ul>
+                <li id="tabnav_1">팔로우 유저 포스트</li>
+                <li id="tabnav_2">내 포스트</li>
+                <li id="tabnav_3">좋아요한 포스트</li>
+            </ul>
+        </div>
+
+        <div class="tabpages">
+            <div class="tabpage" id="tabpage_1">
+                <div class="section6">
+                    <div class="section5_posting">
+                        <a href="top2_post.html"><img src="./image/top2_thumbnail.png"></a>
+                        <div class="section5_posting_description">
+                            <a href="top2_post.html">
+                                <h3>Ai 이미지 생성 프로그램, midjourney 사용후기</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="section5_posting">
+                        <a href="#" target="_blank"><img src="./image/top3_thumbnail.JPG"></a>
+                        <div class="section5_posting_description">
+                            <a href="#" target="_blank">
+                                <h3>땅끝 해남에서의 드라이브</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabpage" id="tabpage_2">
+
+                <div class="section6">
+                    <div class="section5_posting">
+                        <a href="./top1_post.html"><img src="./image/top1_thumbnail.png"></a>
+                        <div class="section5_posting_description">
+                            <a href="./top1_post.html">
+                                <h3>atmega328, 풀업저항 제어하기</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabpage" id="tabpage_3">
+                <div class="section6">
+                    <div class="section5_posting">
+                        <a href="top2_post.html"><img src="./image/top2_thumbnail.png"></a>
+                        <div class="section5_posting_description">
+                            <a href="top2_post.html">
+                                <h3>Ai 이미지 생성 프로그램, midjourney 사용후기</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="foot_nav">
+            <a href="#" target="_blank">정보공개알림</a> |
+            <a href="#" target="_blank">개인정보처리방침</a> |
+            <a href="#" target="_blank">이용서비스현황</a> |
+            <a href="#" target="_blank">이용규정</a> |
+            <a href="#" target="_blank">이메일무단수집거부</a> |
+            <a href="#" target="_blank">전화번호안내</a> |
+            <a href="#" target="_blank">오시는길</a>
+        </div>
+        <div class="addr">
+            <ul>
+                <li>Copyright &copy; POSTLIFE All Right Reserved</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

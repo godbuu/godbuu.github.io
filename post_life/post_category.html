@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>카테고리</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        hr {
+            border: 0.5px solid rgb(201, 198, 198);
+        }
+
+        /*header 스타일*/
+        header {
+            height: 40px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: ivory;
+        }
+
+        header .logo {
+            padding-left: 20px;
+        }
+
+        header table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        header .search {
+            width: 600px;
+            line-height: 40px;
+        }
+
+        .search_for .size {
+            width: 200px;
+            height: 25px;
+        }
+
+        .search_button .size {
+            width: 40px;
+            height: 30px;
+        }
+
+        header .nav {
+            width: 150px;
+        }
+
+        /*section1 스타일*/
+        .section1 {
+            width: 960px;
+            height: 30px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section1 a {
+            padding: 0px 30px;
+            line-height: 30px;
+        }
+
+        /*section2,3,4 스타일*/
+        .section2 img {
+            width: 960px;
+            height: 200px;
+        }
+
+        .section3 {
+            width: 960px;
+            height: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .section3 {
+            line-height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .section3 .size {
+            width: 100px;
+            height: 80px;
+            font-size: 20px;
+        }
+
+        .section4 {
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        /*section5 스타일*/
+        .section5 {
+            width: 960px;
+            margin-bottom: 10px;
+        }
+
+        .section5_posting {
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 3%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .section5_posting>h3 {
+            border-right: 1px solid black;
+            width: 50px;
+            line-height: 50px;
+            padding-left: 10px;
+        }
+
+        .section5_posting img {
+            width: 75px;
+            height: 50px;
+        }
+
+        .section5_posting_description {
+            width: 800px;
+            border-left: 1px solid black;
+        }
+
+        .section5_posting_description h3 {
+            line-height: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /*section 6 스타일*/
+        .section6 {
+            margin-top: 25px;
+        }
+
+        .section6 .section5_posting_description {
+            width: 900px;
+            border-left: 1px solid black;
+        }
+
+        /*footer 스타일*/
+        .foot {
+            width: 960px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .foot_nav {
+            width: 960px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .foot_nav>a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 12px;
+        }
+
+        .foot_nav>a:hover {
+            /* 마우스 올렸을 때 : hover */
+            color: blue;
+        }
+
+        .foot li {
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>POST LIFE</h1>
+            </a>
+        </div>
+        <div class="search">
+            <table border="0">
+                <tr>
+                    <form>
+                        <td class="search_for"><input class="size" type="text" name="search" id="search" />
+                        <td class="search_button"><input class="size" type="button" name="search_btn" id="search_btn"
+                                value="검색" />
+                    </form>
+                </tr>
+            </table>
+        </div>
+        <div class="nav">
+            <a href="login.html"> 로그인 </a> &nbsp;
+            <a href="membership.html"> 회원가입 </a>
+        </div>
+    </header>
+    <hr />
+
+    <div class="section1">
+        <a href="post_category.html"> 인기 포스트</a>
+        <a href="post_category.html"> 최신 포스트</a>
+        <a href="my_page.html"> my page</a>
+    </div>
+
+    <div class="section2">
+        <a href="index.html"> <img src="./image/pic1.png" /> </a>
+    </div>
+
+    <div class="section3">
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn1" id="tab_btn1" value="일상" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn2" id="tab_btn2" value="푸드" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn3" id="tab_btn3" value="여행" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn4" id="tab_btn4" value="IT" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn5" id="tab_btn5" value="게임" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn6" id="tab_btn6" value="어학" />
+        </a>
+        <a href="post_category.html">
+            <input class="size" type="button" name="tab_btn7" id="tab_btn7" value="경제" />
+        </a>
+    </div>
+    <hr />
+
+    <div class="section4">
+        <h2>Category - best</h2>
+    </div>
+
+    <div class="section5">
+        <div class="section5_posting">
+            <h3>top1</h3>
+            <a href="./top1_post.html"><img src="./image/top1_thumbnail.png"></a>
+            <div class="section5_posting_description">
+                <a href="./top1_post.html">
+                    <h3>atmega328, 풀업저항 제어하기</h3>
+                </a>
+            </div>
+        </div>
+        <div class="section5_posting">
+            <h3>top2</h3>
+            <a href="top2_post.html"><img src="./image/top2_thumbnail.png"></a>
+            <div class="section5_posting_description">
+                <a href="top2_post.html">
+                    <h3>Ai 이미지 생성 프로그램, midjourney 사용후기</h3>
+                </a>
+            </div>
+        </div>
+        <div class="section5_posting">
+            <h3>top3</h3>
+            <a href="#" target="_blank"><img src="./image/top3_thumbnail.JPG"></a>
+            <div class="section5_posting_description">
+                <a href="#" target="_blank">
+                    <h3>땅끝 해남에서의 드라이브</h3>
+                </a>
+            </div>
+        </div>
+        <hr />
+    </div>
+
+    <div class="section4">
+        <h2>Category - recent</h2>
+    </div>
+
+    <div class="section6">
+        <div class="section5_posting">
+            <a href="./top1_post.html"><img src="./image/top1_thumbnail.png"></a>
+            <div class="section5_posting_description">
+                <a href="./top1_post.html">
+                    <h3>atmega328, 풀업저항 제어하기</h3>
+                </a>
+            </div>
+        </div>
+        <div class="section5_posting">
+            <a href="top2_post.html"><img src="./image/top2_thumbnail.png"></a>
+            <div class="section5_posting_description">
+                <a href="top2_post.html">
+                    <h3>Ai 이미지 생성 프로그램, midjourney 사용후기</h3>
+                </a>
+            </div>
+        </div>
+        <div class="section5_posting">
+            <a href="#" target="_blank"><img src="./image/top3_thumbnail.JPG"></a>
+            <div class="section5_posting_description">
+                <a href="#" target="_blank">
+                    <h3>땅끝 해남에서의 드라이브</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+
+        <div class="foot">
+            <div class="foot_nav">
+                <a href="#" target="_blank">정보공개알림</a> |
+                <a href="#" target="_blank">개인정보처리방침</a> |
+                <a href="#" target="_blank">이용서비스현황</a> |
+                <a href="#" target="_blank">이용규정</a> |
+                <a href="#" target="_blank">이메일무단수집거부</a> |
+                <a href="#" target="_blank">전화번호안내</a> |
+                <a href="#" target="_blank">오시는길</a>
+            </div>
+            <div class="addr">
+                <ul>
+                    <li>Copyright &copy; POSTLIFE All Right Reserved</li>
+                </ul>
+            </div>
+        </div>
+</body>
+
+</html>

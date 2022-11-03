@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link href="./css/basic.css" rel="stylesheet" />
+    <script src="./js/jquery-3.6.1.min.js"></script>
+
+    <style>
+        /*header 스타일*/
+        header {
+            height: 100px;
+            line-height: 100px;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        header .logo {
+            width: 600px;
+            display: flex;
+            justify-content: center;
+            background-color: ivory;
+        }
+
+        /*member_form 스타일*/
+        .member_form {
+            width: 960px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .member_form table {
+            border-collapse: collapse;
+            border-spacing: 0px;
+        }
+
+        .member_form tr {
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .title {
+            width: 180px;
+            text-align: center;
+        }
+
+        .content {
+            width: 450px;
+            padding-left: 10px;
+        }
+
+        .con1 {
+            width: 250px;
+            height: 26px;
+        }
+
+        .p1 {
+            width: 100px;
+            height: 26px;
+            line-height: 26px;
+        }
+
+        .submit {
+            text-align: center;
+        }
+
+        #submit {
+            /*id*/
+            width: 100px;
+            height: 40px;
+        }
+
+        /*foot 스타일*/
+        .foot {
+            width: 960px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .foot_nav {
+            width: 960px;
+            height: 33px;
+            line-height: 33px;
+            text-align: center;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+        }
+
+        .foot_nav>a {
+            display: inline-block;
+            padding: 0px 10px;
+            font-size: 12px;
+        }
+
+        .foot_nav>a:hover {
+            /* 마우스 올렸을 때 : hover */
+            color: blue;
+        }
+
+        .foot li {
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="./index.html"><h1>POST LIFE</h1></a>
+        </div>
+    </header>
+
+    <form action="" name="membership">
+        <div class="member_form">
+            <table border="0" height="500">
+                <tr>
+                    <td class="title"><label for="id">아 이 디</label></td>
+                    <td class="content"><input class="con1" type="text" name="id" id="id" required /></td>
+                </tr>
+                <tr>
+                    <td class="title"><label for="password">비밀번호</label></td>
+                    <td class="content"><input class="con1" type="password" name="password" id="password" required
+                            placeholder="4자~12자공백제외 특수문자 영문자" /></td>
+                </tr>
+                <tr>
+                    <td class="title"><label for="pwd">비밀번호확인</label></td>
+                    <td class="content"><input class="con1" type="pwd" name="pwd" id="pwd" required /></td>
+                </tr>
+                <tr>
+                    <td class="title"><label for="name">이 름</label></td>
+                    <td class="content"><input class="con1" type="text" name="name" id="name" required
+                            placeholder="이름을 입력하세요" /></td>
+                </tr>
+                <tr>
+                    <td class="title"><label for="email">이메일</label></td>
+                    <td class="content"><input class="con1" type="email" name="email" id="email" /></td>
+                </tr>
+                <tr>
+                    <td class="title"><label for="phone">휴대폰번호</label></td>
+                    <td class="content"><input type="text" name="phone1" id="phone1" class="p1" /> -
+                        <input type="text" name="phone2" id="phone2" class="p1" /> -
+                        <input type="text" name="phone3" id="phone3" class="p1" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="submit" colspan="2"><input type="submit" name="submit" id="submit" value="가입하기" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="foot">
+        <div class="foot_nav">
+            <a href="#" target="_blank">정보공개알림</a> |
+            <a href="#" target="_blank">개인정보처리방침</a> |
+            <a href="#" target="_blank">이용서비스현황</a> |
+            <a href="#" target="_blank">이용규정</a> |
+            <a href="#" target="_blank">이메일무단수집거부</a> |
+            <a href="#" target="_blank">전화번호안내</a> |
+            <a href="#" target="_blank">오시는길</a>
+        </div>
+        <div class="addr">
+            <ul>
+                <li>Copyright &copy; POSTLIFE All Right Reserved</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+   /* 초기화 */
+*{
+    margin : 0px; padding : 0px;
+}
+body{
+    width : 960px; /* 12의 배수로 */
+    margin : 0px auto; /* 위아래 여백 0, 내용들의 좌우 여백은 자동으로 대칭*/
+}
+a{
+    text-decoration: none;
+    color : black;
+}
+a:visited{ /* 갔다온 사이트의 보라색 표시 제거*/
+    text-decoration: none;
+    color : black;
+}
+ul{
+    margin : 0px; padding : 0px;
+}
+li{
+    list-style: none;
+}
+img, p{
+    border : 0px;
+    margin : 0px;
+    padding : 0px;
+}
